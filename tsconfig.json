@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    "allowJs": true,
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "preserve",
+    "importHelpers": true,
+    "lib": [
+      "es2019",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "webpack-env"
+    ],
+    "outDir": "./server",
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "./src/backend/*.ts",
+    "./src/Types/*.ts",
+    "./src/schedule/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
