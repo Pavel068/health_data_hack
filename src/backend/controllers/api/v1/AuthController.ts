@@ -1,6 +1,5 @@
 import { Request, Response } from 'express'
 import { User } from '../../../models/User'
-import { hashPassword } from '../../../services/Helper'
 import * as crypto from 'crypto'
 import { compareSync } from 'bcrypt'
 import { processError } from '../../../services/Helper'

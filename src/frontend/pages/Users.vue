@@ -6,24 +6,24 @@
                 <div class="card-body">
                     <table class="table table-striped table-bordered">
                         <thead>
-                        <tr>
-                            <th style="width: 5%">ID</th>
-                            <th>Имя</th>
-                            <th>E-Mail</th>
-                            <th style="width: 50%">Токен</th>
-                            <th style="width: 15%"></th>
-                        </tr>
+                            <tr>
+                                <th style="width: 5%">ID</th>
+                                <th>Имя</th>
+                                <th>E-Mail</th>
+                                <th style="width: 50%">Токен</th>
+                                <th style="width: 15%"></th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr v-for="user in users">
-                            <td>{{ user.id }}</td>
-                            <td>{{ user.name }}</td>
-                            <td>{{ user.email }}</td>
-                            <td>{{ user.access_token }}</td>
-                            <td style="text-align: right">
-                                <button class="btn btn-danger" @click="deleteUser(user.id)">Удалить</button>
-                            </td>
-                        </tr>
+                            <tr v-for="user in users">
+                                <td>{{ user.id }}</td>
+                                <td>{{ user.name }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>{{ user.access_token }}</td>
+                                <td style="text-align: right">
+                                    <button class="btn btn-danger" @click="deleteUser(user.id)">Удалить</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -34,8 +34,8 @@
                 <div class="card-header bg-dark text-light">Добавить пользователя</div>
                 <div class="card-body">
                     <form action="">
-                        <input type="text" class="form-control" v-model="form.name" placeholder="Введите имя">
-                        <input type="text" class="form-control" v-model="form.email" placeholder="Введите email">
+                        <input type="text" class="form-control" v-model="form.name" placeholder="Введите имя" />
+                        <input type="text" class="form-control" v-model="form.email" placeholder="Введите email" />
                         <button class="btn btn-primary mt-2" @click="addUser">Добавить</button>
                     </form>
                 </div>
@@ -46,19 +46,19 @@
 
 <script lang="ts">
 export default {
-    name: "Users",
+    name: 'Users',
     data: () => {
         return {
             form: {
                 email: null,
-                name: null
-            }
+                name: null,
+            },
         }
     },
     computed: {
         users() {
             return this.$store.getters.getUsers
-        }
+        },
     },
     methods: {
         async addUser(event) {
@@ -80,11 +80,11 @@ export default {
             } catch (e) {
                 alert('Ошибка!')
             }
-        }
+        },
     },
     async mounted() {
         await this.$store.dispatch('loadUsers')
-    }
+    },
 }
 </script>
 
