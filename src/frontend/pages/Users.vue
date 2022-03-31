@@ -7,11 +7,11 @@
                     <table class="table table-striped table-bordered">
                         <thead>
                         <tr>
-                            <td style="width: 5%">ID</td>
-                            <td>Имя</td>
-                            <td>E-Mail</td>
-                            <td style="width: 50%">Токен</td>
-                            <td style="width: 15%"></td>
+                            <th style="width: 5%">ID</th>
+                            <th>Имя</th>
+                            <th>E-Mail</th>
+                            <th style="width: 50%">Токен</th>
+                            <th style="width: 15%"></th>
                         </tr>
                         </thead>
                         <tbody>
