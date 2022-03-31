@@ -2,10 +2,11 @@
     <div class="row">
         <div class="col-lg-12">
             <nav class="navbar navbar-light bg-dark justify-content-between fixed-top">
-                <div class="menu">
+                <div class="menu" v-if="isAuth">
                     <router-link :to="{ name: 'Index' }">Главная</router-link>
+                    <router-link :to="{ name: 'Users' }">Пользователи</router-link>
                 </div>
-                <router-link v-if="!isAuth" class="mx-2" :to="{ name: 'Login' }">Login</router-link>
+                <router-link v-if="!isAuth" class="mx-2" :to="{ name: 'Login' }">Авторизация</router-link>
                 <a class="mx-2" @click="logout" v-if="isAuth">Выйти</a>
             </nav>
         </div>

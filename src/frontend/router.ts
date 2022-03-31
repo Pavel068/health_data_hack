@@ -9,12 +9,20 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('./pages/Index.vue'),
         meta: {
             auth: true,
-        },
+        }
     },
     {
         path: '/login',
         name: 'Login',
         component: () => import('./pages/Login.vue'),
+    },
+    {
+        path: '/users',
+        name: 'Users',
+        component: () => import('./pages/Users.vue'),
+        meta: {
+            auth: true,
+        }
     },
 ]
 
